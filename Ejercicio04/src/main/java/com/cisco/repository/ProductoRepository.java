@@ -11,7 +11,7 @@ import com.cisco.entity.Producto;
 public interface ProductoRepository extends JpaRepository<Producto, Integer> {
 
 	
-	@Query("Select a from Producto a where descripcion like :fil")
+	@Query("Select a from Producto a where nombres like :fil")
 	public abstract List<Producto> listaProductoPorNombreLike(@Param("fil") String filtro);
 
 	public abstract List<Producto> findByDescripcion(String descripcion);
